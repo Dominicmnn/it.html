@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula IT Solutions | Technology Services in Somalia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #30143c;
+            --secondary: #9c1675;
+            --accent: #d64fb8;
+            --light: #f8f2ff;
+            --dark: #1a0a24;
+            --gray: #a091ac;
+            --success: #10b981;
+            --gradient: linear-gradient(135deg, #30143c, #9c1675);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--gradient);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(156, 22, 117, 0.3);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(156, 22, 117, 0.4);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--secondary);
+            color: var(--secondary);
+            box-shadow: none;
+        }
+        
+        .btn-outline:hover {
+            background: var(--secondary);
+            color: white;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .header-scrolled {
+            padding: 10px 0;
+            background: rgba(255, 255, 255, 0.98);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 60px;
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo-text span {
+            color: var(--secondary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin: 0 15px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+        
+        .nav-links a:hover:after {
+            width: 100%;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero { 
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+                  rgba(48, 20, 60, 0.85), 
+                  rgba(156, 22, 117, 0.85)
+               ),
+               url("Images/WhatsApp Image 2025-08-01 at 13.21.39_8600f4a4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-top: 80px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #e2e8f0;
+        }
+        
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            max-width: 800px;
+            margin: 60px auto 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 5px;
+        }
+        
+        .stat-item p {
+            font-size: 1rem;
+            color: #cbd5e1;
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: white;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(156, 22, 117, 0.15);
+        }
+        
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .service-content ul {
+            list-style-type: none;
+            margin-top: 15px;
+        }
+        
+        .service-content ul li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .service-content ul li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 8px;
+            color: var(--secondary);
+        }
+        
+        /* About Section */
+        .about {
+            background: linear-gradient(to bottom, #f0f5ff, #ffffff);
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-img {
+            flex: 1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h2 {
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .highlight {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+        
+        /* Team Section */
+        .team {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .team .section-title {
+            color: white;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .member-img {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .member-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .member-info {
+            padding: 25px;
+        }
+        
+        .member-info h3 {
+            color: white;
+            margin-bottom: 5px;
+        }
+        
+        .member-info p {
+            color: var(--accent);
+            font-style: italic;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: white;
+        }
+        
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .contact-info {
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f2ff, #f0e0ff);
+            border-radius: 15px;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .contact-details {
+            margin: 25px 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            margin-bottom: 20px;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: white;
+        }
+        
+        .contact-text h4 {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+        
+        .contact-form {
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--primary);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--secondary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(156, 22, 117, 0.2);
+        }
+        
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h4:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--secondary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+        
+        /* Nebula Logo Styling */
+        .nebula-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            line-height: 1;
+            color: white;
+            text-align: center;
+        }
+        
+        .nebula-logo-top {
+            font-size: 2.8rem;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .nebula-logo-bottom {
+            font-size: 1.4rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .nebula-logo-top {
+                font-size: 2.2rem;
+            }
+            
+            .nebula-logo-bottom {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: white;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 50px;
+                transition: all 0.3s ease;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nebula-logo {
+                margin-top: 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .nebula-logo-top {
+                font-size: 1.8rem;
+            }
+            
+            .nebula-logo-bottom {
+                font-size: 0.9rem;
+                letter-spacing: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="#" class="logo-text">Nebula<span> IT Solutions</span></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <!-- Nebula Logo -->
+                <div class="nebula-logo">
+                    <div class="nebula-logo-top">NEBULA</div>
+                    <div class="nebula-logo-bottom">IT SOLUTIONS</div>
+                </div>
+                
+                <p>Nebula IT Solutions provides cutting-edge technology services to empower businesses in Somalia and beyond. With 6 years of excellence, we deliver quality solutions tailored to your needs.</p>
+                <div class="hero-btns">
+                    <a href="#services" class="btn">Explore Services</a>
+                    <a href="#contact" class="btn btn-outline">Contact Us</a>
+                </div>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>13+</h3>
+                        <p>Service Categories</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>6+</h3>
+                        <p>Years of Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100+</h3>
+                        <p>Projects Delivered</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title text-center">Our IT Services</h2>
+            <p class="text-center" style="max-width: 700px; margin: 0 auto 40px;">Comprehensive technology solutions designed to transform your business and drive growth in the digital age.</p>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80" alt="Software Development">
+                    </div>
+                    <div class="service-content">
+                        <h3>Software Development</h3>
+                        <ul>
+                            <li>Custom Software Development</li>
+                            <li>Mobile App Development</li>
+                            <li>Web Development</li>
+                            <li>SaaS Solutions</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80" alt="IT Consulting">
+                    </div>
+                    <div class="service-content">
+                        <h3>Professional Training Programs</h3>
+                        <ul>
+                            <li>Computer Basics</li>
+                            <li>Advanced Tech Programs</li>
+                            <li>Graphic Design</li>
+                            <li>Digital Marketing</li>
+                            <li>Computer Hardware</li>
+                            <li>Language and Communication</li>
+
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80" alt="Cloud Services">
+                    </div>
+                    <div class="service-content">
+                        <h3>Cloud Services</h3>
+                        <ul>
+                            <li>Cloud Migration</li>
+                            <li>Cloud Management</li>
+                            <li>Cloud Hosting (AWS, Azure, GCP)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80" alt="Cybersecurity">
+                    </div>
+                    <div class="service-content">
+                        <h3>Cybersecurity Services</h3>
+                        <ul>
+                            <li>Network Security</li>
+                            <li>Data Protection & Encryption</li>
+                            <li>Penetration Testing</li>
+                            <li>Security Training</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80" alt="IT Support">
+                    </div>
+                    <div class="service-content">
+                        <h3>IT Support & Managed Services</h3>
+                        <ul>
+                            <li>Help Desk Support</li>
+                            <li>System Monitoring</li>
+                            <li>Network Administration</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1603574670812-d24560880210?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80" alt="Networking">
+                    </div>
+                    <div class="service-content">
+                        <h3>Networking Services</h3>
+                        <ul>
+                            <li>LAN/WAN Setup</li>
+                            <li>Wi-Fi Deployment</li>
+                            <li>VPN Setup</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Service 7 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80" alt="Data Services">
+                    </div>
+                    <div class="service-content">
+                        <h3>Data Services</h3>
+                        <ul>
+                            <li>Database Design & Management</li>
+                            <li>Data Backup & Recovery</li>
+                    <li>Big Data Analytics</li>
+                    <li>Business Intelligence</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Service 8 -->
+        <div class="service-card">
+            <div class="service-img">
+                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80" alt="Enterprise Solutions">
+            </div>
+            <div class="service-content">
+                <h3>Enterprise Solutions</h3>
+                <ul>
+                    <li>ERP Implementation</li>
+                    <li>CRM Solutions</li>
+                    <li>HR Management Systems</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1950&q=80" alt="Nebula IT Solutions">
+            </div>
+            <div class="about-text">
+                <h2>About Nebula IT Solutions</h2>
+                <p>Founded in 2019, Nebula IT Solutions is a dynamic and forward-thinking educational and technological institution based in Abudwak, Galmudug region, Somalia. For over 6 years, we have been delivering quality IT solutions and training programs that empower businesses and individuals.</p>
+                <p>Our mission is to bridge the technology gap in Somalia by providing cutting-edge IT services, comprehensive training programs, and strategic consulting that drives digital transformation and business growth.</p>
+                <p>At Nebula IT Solutions, we combine <span class="highlight">technical expertise</span> with <span class="highlight">local understanding</span> to deliver solutions that meet the unique challenges and opportunities of the Somali market.</p>
+                <p>Whether you need custom software development, cybersecurity solutions, cloud migration, or IT training, our team of experts is committed to delivering excellence and driving your success.</p>
+                <a href="#contact" class="btn" style="margin-top: 20px;">Get in Touch</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="team" id="team">
+    <div class="container">
+        <h2 class="section-title text-center">Our Key Staff</h2>
+        <p class="text-center" style="max-width: 700px; margin: 0 auto 40px; color: #d6b1e8;">Meet the dedicated professionals behind Nebula IT Solutions</p>
+        
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-img">
+                    <img src="Images\WhatsApp Image 2025-08-01 at 13.21.09_a3f76910.jpg">
+                </div>
+                <div class="member-info">
+                    <h3>Eng. Abdullahi Abdinasir</h3>
+                    <p>Basic & Advanced Tech Programs</p>
+                </div>
+            </div>
+            
+            
+            
+            <div class="team-member">
+                <div class="member-img">
+                    <img src="Images\WhatsApp Image 2025-08-01 at 13.21.14_202655d9.jpg" alt="Mr. Loyd Kinoti Kamencu">
+                </div>
+                <div class="member-info">
+                    <h3>Mr. Loyd Kinoti Kamencu</h3>
+                    <p>English Language Trainer & Communication Expert</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="container">
+        <h2 class="section-title text-center">Contact Us</h2>
+        <p class="text-center" style="max-width: 700px; margin: 0 auto 40px;">Reach out to discuss how Nebula IT Solutions can help transform your business with technology</p>
+        
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Opposite Hassan Abudwak Mosque, Abudwak Town, Galmudug Region, Somalia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <p>+252 610 937 723 , +252 616 948 503</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Contact People</h4>
+                            <p>Eng. Abdullahi Abdinasir Said, Mr. Loyd Kinoti Kamencu</p>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+            
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>Nebula IT Solutions</h4>
+                <p>Providing innovative technology solutions and training programs to empower businesses and individuals in Somalia since 2019.</p>
+                
+            </div>
+            
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Software Development</a></li>
+                    <li><a href="#">Professional Training Programs</a></li>
+                    <li><a href="#">Cloud Services</a></li>
+                    <li><a href="#">Cybersecurity</a></li>
+                    <li><a href="#">IT Support</a></li>
+                    <li><a href="#">Enterprise Solutions</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Abudwak, Galmudug, Somalia</li>
+                    <li><i class="fas fa-phone"></i> +252 610 937 723,    +252 616 948 503</li>
+                    <li><i class="fas fa-user"></i> Eng. Abdullahi Abdinasir Said, Mr. Loyd Kinoti Kamencu</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 Nebula IT Solutions. All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+        const header = document.getElementById('header');
+        if (window.scrollY > 100) {
+            header.classList.add('header-scrolled');
+        } else {
+            header.classList.remove('header-scrolled');
+        }
+    });
+    
+    // Mobile menu toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                window.scrollTo({
+                    top: target.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                navLinks.classList.remove('active');
+            }
+        });
+    });
+    
+    // Form submission
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            contactForm.reset();
+        });
+    }
+    
+    // Service card animations
+    const serviceCards = document.querySelectorAll('.service-card');
+    serviceCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+</script>
+</body>
+</html>
